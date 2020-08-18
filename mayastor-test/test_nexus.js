@@ -282,7 +282,7 @@ describe('nexus', function () {
             '-r',
             '/tmp/target.sock',
             '-s',
-            '128'
+            '128',
           ]);
           next();
         },
@@ -303,7 +303,7 @@ describe('nexus', function () {
           next();
         },
         (next) => {
-          common.startMayastor(configNexus, ['-r', common.SOCK, '-g', common.grpcEndpoint, '-s', 386]);
+          common.startMayastor(configNexus, ['-r', common.SOCK, '-g', common.grpcEndpoint, '-s', 386, '-L', 'iscsi']);
 
           common.waitFor((pingDone) => {
             // use harmless method to test if the mayastor is up and running

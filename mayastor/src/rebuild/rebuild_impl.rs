@@ -102,6 +102,7 @@ impl RebuildJob {
     }
 
     /// Returns a new rebuild job based on the parameters
+    #[allow(clippy::same_item_push)]
     pub(super) fn new(
         nexus: &str,
         source: &str,
